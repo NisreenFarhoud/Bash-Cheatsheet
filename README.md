@@ -221,23 +221,12 @@ For example, the following will send the `ls` output to `head` so that only the 
   $ ls -l | head
 ```
 ##Input/Output Redirection
-I/O redirection is a handy tool that allows the user to send the output of a command somewhere other then the screen or even have a command accept input from somewhere other than the keyboard.
+I/O redirection allows the user to send the output of a command somewhere other then the screen or even have a command accept input from somewhere other than the keyboard.
 ###Output Redirection
 Standard output redirection uses the symbols `>` and `>>`. <br>
-Most commands such as `ls` send their results to standard output, which prints to the screen.
-Instead of printing to the screen we can redirect the standard output to print into a file.
-The command goes before the symbol and the file goes after the symbol, as follows:
+For example, the following will send the output of `ls` into the file instead of printing to the screen.
 ```
   ls > files.txt
-```
-If we ran `ls` on its own we may get a results such as:
-```
-  $ ls
-  file1.cpp sample.txt
-```
-But if we run the above command with output redirection, there will be no output to the display, the output will be in a file, such as:
-```
-  $ ls > files.txt
   $ cat files.txt
   file1.cpp sample.txt
 ```
@@ -247,8 +236,7 @@ If the file already exists, then the contents of the command will overwrite what
 To avoid overwriting a file, the `>>>` command will do the same thing as the `>` command except it will append to the end of the file instead.
 ###Input Redirection
 Standard input redirection uses the symbol `<`. <br>
-Just like standard output redirection, the command goes before the symbol and the file that the command will be getting its input from goes after the symbol.
-Running the command `sort` with `<` will cause sort to access the input necessary to execute from the input file instead of standard input, such as:
+For example, the following will cause `sort` to access its input from the file instead of the keyboard.
 ```
   $ cat files.txt
   a
@@ -264,8 +252,7 @@ But we can combine I/O redirection into one command line, such as:
 ```
   $ sort < files.txt > files_sorted.txt
 ```
-Notice that nothing got printed to the screen. 
-That is because the output was now sent to the files_sorted.txt file.
+The output is now being sent to the files_sorted.txt file.
 ###Advanced Redirection
 Adding a `&` with the `>` symbol will result in redirecting both standard out and standard error.
 For example, running the following command on a file named "test.cpp" that prints the string "stdout" with `cout` and the string "stderr" with `cerr` will result in the following output:
