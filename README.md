@@ -68,7 +68,8 @@ For example,
   $ grep 'student` file1.txt
   user:student password:123
 ```
-You can pass multiple files as parameters.<br>
+You can pass multiple files as parameters.
+
 Common flags | Description 
 --- | ---
   `-i` | remove case sensitivity
@@ -150,6 +151,7 @@ There will be four items displayed:
   * terminal type (TTY), 
   * how long process has been running (TIME)
   * name of command that launched the process (CMD)
+
 ###awk
 The `awk` command finds and replaces text by searching through files for lines that have a pattern. <br>
 The syntax for the command is
@@ -189,7 +191,8 @@ The `PATH` variable contains a list of directories where systems look for execut
 The `HOME` variable contains the path to the home directory of the current user. <br>
 The `PS1` variable is the default prompt to control appearances of the command prompt. <br>
 ##Connectors
-Connectors allow you to run multiple commands at once. <br>
+Connectors allow you to run multiple commands at once.
+
 When using the `&&` connector, the first command will always execute and the next command will only execute if the one before it succeeds.
 For example, the command `echo` will execute in the first example but not in the second.
 ```
