@@ -1,20 +1,16 @@
 Bash Shell Cheatsheet
 =====================
 
-The main topics we’ll go over include an intro to the shell, navigating around the shell, common commands, environment variables, connectors, I/O redirection, permissions, and keyboard shortcuts.
-
+The main topics we’ll go over include an intro to the shell, navigating around the shell, common commands, environment variables, connectors, piping, I/O redirection, permissions, and keyboard shortcuts.
 ##Introduction to the Shell
 The shell is a program, in our case, called "bash" which stands for Bourne Again Shell. 
-Other examples of shells include ksh, tcsh, etc.
-
+Other examples of shells include ksh, tcsh, etc. <br>
 How the shell works is it takes your commands and gives them to the operating system to perform.
 In order to interact with the shell, we use "terminal emulators" such as the gnome-terminal, eterm, nxterm, etc. 
-
 ##Navigating Around The Shell
 On a Linus system, files are organized in a hierarchical directory structure. 
 This means there is a starting directory called the root directory.
 This directory contains files and subdirectories that lead into other subdirectories.
-
 ###pwd
 The `pwd` command, short for print working directory, displays where you are in the directory structure.
 Your location is known as the working directory.
@@ -26,7 +22,6 @@ For example, if we call `pwd` and the output is:
   ```
 then our working directory is `/home/user`.
 When you first enter the bash shell, your directory location will be your home directory.
-
 ###cd
 The `cd` command allows you to enter a new directory.
 
@@ -37,19 +32,15 @@ cd .. | navigate backwords to parent directory
 cd - | navigate to previous working directory
 cd Directory1 | navigate to directory named Directory1
 cd Directory1/Directory2 | navigate to directory, Directory2, through path
-
 ###mkdir
 The `mkdir` command makes a new directory in your current directory. <br>
 For example,
   ````
-    $ pwd
-    /home/user/Downloads/CS100
     $ mkdir Hw1
     $ cd Hw1
     $ pwd
     /home/user/Downloads/CS100/Hw1
   ````
-  
 ##Common Commands
 ###cat
 The `cat` command will read a file passed as a parameter and by default print its contents to standard output. <br>
@@ -58,8 +49,7 @@ For example, the following file contains the phrase "Hello World!".
   $ cat file1.txt
   Hello World!
 ```
-Using redirection, you can send the output to a file instead.
-
+Using redirection, you can send the output to a file instead. <br>
 Passing multiply files as parameters will concatenate the files and then print to standard ouput.
 For example, "file1.txt" contains the phrase "Hello" while file2.txt contains the phrase "World".
 ```
@@ -67,7 +57,6 @@ For example, "file1.txt" contains the phrase "Hello" while file2.txt contains th
   Hello
   World
 ```
-
 ###grep
 The `grep` command is used as a search function. <br>
 Passing a string and a file will search the file for the given string and print the occurrences to standard output. 
@@ -88,7 +77,6 @@ Common flags | Description
   `-c` | prints number of times found
   `-n` | prints line found on with phrase
   `-v` | prints invert match
-
 ###head
 The `head` command reads the first 10 lines of any passed in text and prints its contents to standard output.
 You can change the default 10 lines to any number by manualing passing in the desired size.
@@ -96,7 +84,6 @@ For example, the following will print all 50 lines of the file.
 ```
   $ head -50 test.txt
 ```
-
 ###tail
 The `tail` command reads the last 10 lines of any passed in text and prints its contents to standard output.
 You can change the default 10 lines to any number by manually passing in the desired size.
@@ -121,10 +108,8 @@ For example, I will replace all occurrences of the phrase "Hello" with "Hi".
 ```
   $ cat test.txt
   Hello World
-  How are you?
   $ sed 's/Hello/Hi/' test.txt
   Hi World
-  How are you?
 ```
 [See sed tutorial](textbook/using-bash/sed)
 ###man
@@ -133,7 +118,6 @@ For example, the following command will give us all the information we need abou
 ```
   $ man cat
 ```
-
 ###echo
 The `echo` command prints its arguments to standard output. <br>
 For example,
@@ -142,14 +126,12 @@ For example,
   Hello World
 ```
 If you call `echo` without any parameters, the command will print a new line.
-
 ###export
 The `export` command will set an environment variable to be passed to child processes in the environment. <br>
 For example, the following will export the variable "name" with the value "student".
 ```
   $ export name=student
 ```
-
 ###ps
 The `ps` command, short for process status, will print out information about the processes running. <br>
 For example,
@@ -164,7 +146,6 @@ There will be four items displayed:
   * terminal type (TTY), 
   * how long process has been running (TIME)
   * name of command that launched the process (CMD)
-
 ###awk
 The `awk` command finds and replaces text by searching through files for lines that have a pattern. <br>
 The syntax for the command is
@@ -203,7 +184,6 @@ Environment variables are named variables that contain values used by one or mor
 The `PATH` variable contains a list of directories where systems look for executable files. <br>
 The `HOME` variable contains the path to the home directory of the current user. <br>
 The `PS1` variable is the default prompt to control appearances of the command prompt. <br>
-
 ##Connectors
 Connectors allow you to run multiple commands at once. <br>
 When using the `&&` connector, the first command will always execute and the next command will only execute if the one before it succeeds.
@@ -223,17 +203,20 @@ For example, the command `echo` will execute in the second example but not in th
 When using the `;` connector, the first command and the following commands will always execute.
 For example, every command passed will execute.
 ```
-  $ echo Hello ; echo World ; ls
+  $ echo Hello ; ls
   Hello
-  World
   test.txt file1.txt file2.txt
+```
+##Piping
+Pipes allow you to connect multiple commands together by sending the standard output of the first command to the standard input of the next command. 
+For example, the following will send the `ls` output to `head` so that only the top 10 items get printed.
+```
+  $ ls -l | head
 ```
 ##Input/Output Redirection
 I/O redirection is a handy tool that allows the user to send the output of a command somewhere other then the screen or even have a command accept input from somewhere other than the keyboard.
-
 ###Output Redirection
-Standard output redirection uses the symbols `>` and `>>`.
-
+Standard output redirection uses the symbols `>` and `>>`. <br>
 Most commands such as `ls` send their results to standard output, which prints to the screen.
 Instead of printing to the screen we can redirect the standard output to print into a file.
 The command goes before the symbol and the file goes after the symbol, as follows:
@@ -251,16 +234,12 @@ But if we run the above command with output redirection, there will be no output
   $ cat files.txt
   file1.cpp sample.txt
 ```
-We can use the command `cat` to output the contents of a file to the display.
-
+We can use the command `cat` to output the contents of a file to the display. <br>
 The file doesn't need to exist prior to running the command, if the file isnt already in your working directory, the file will be created.
-If the file already exists, then the contents of the command will overwrite what is already in the file.
-
+If the file already exists, then the contents of the command will overwrite what is already in the file. <br>
 To avoid overwriting a file, the `>>>` command will do the same thing as the `>` command except it will append to the end of the file instead.
-
 ###Input Redirection
-Standard input redirection uses the symbol `<`.
-
+Standard input redirection uses the symbol `<`. <br>
 Just like standard output redirection, the command goes before the symbol and the file that the command will be getting its input from goes after the symbol.
 Running the command `sort` with `<` will cause sort to access the input necessary to execute from the input file instead of standard input, such as:
 ```
@@ -280,7 +259,6 @@ But we can combine I/O redirection into one command line, such as:
 ```
 Notice that nothing got printed to the screen. 
 That is because the output was now sent to the files_sorted.txt file.
-
 ###Advanced Redirection
 Adding a `&` with the `>` symbol will result in redirecting both standard out and standard error.
 For example, running the following command on a file named "test.cpp" that prints the string "stdout" with `cout` and the string "stderr" with `cerr` will result in the following output:
@@ -299,8 +277,7 @@ If we run the same command but without the `&` symbol the result will look like:
   $ cat test.txt
   stdout
 ```
-The `>` symbol alone only redirects standard output.
-
+The `>` symbol alone only redirects standard output. <br>
 If you only want to redirect a specific file descriptor you can attach the file descriptor number to `>`.
 
 Name | File Descriptor | Description
@@ -308,7 +285,6 @@ Name | File Descriptor | Description
 stdin | 0 | standard input stream
 stdout | 1 | standard output stream
 stderr | 2 | standard error output stream
-
 For example, if I only wanted to redirect "stderr" to the file "test.txt" from the above example, I would do the following:
 ```
   $ g++ test.cpp 
@@ -317,7 +293,6 @@ For example, if I only wanted to redirect "stderr" to the file "test.txt" from t
   $ cat test.txt
   stderr
 ```
-
 ##Permissions
 When you run the command `ls -l` you will notice that a lot of information shows up about each file.
 For example,
@@ -325,7 +300,6 @@ For example,
   $ ls -l test.txt
   -rw-rw-r--  1  user  group  1097374 January 26 2:48 test.txt
 ```
-
 Output from example above | Description/Possible Outputs 
 --- | --- 
 - | File type: <br> `-`= regular file <br> `d`= directory 
@@ -334,7 +308,6 @@ rw- | Permissions for memebrs of the gorup owning the file: <br> `r`= has read p
 r-- | Permissions for all other users: <br> `r`= has read permission <br> `w`= has write permission <br> `x`= has executable permission <br> `-`= has no permission for either read/write/execute
 user | name of user
 group | name of group
-
 ###chmod
 The `chmod` command changes the permissions of a file. <br>
 There is a combination of letters that need to be known in order to change specific users' permission. 
@@ -345,7 +318,6 @@ Letter | User
 u | User who owns it
 g | Users in the group
 a | All users
-
 You call `chmod` by describing which actions you want to perform and to which file.
 For example, the following will deny write permission to everyone:
 ```
@@ -360,7 +332,6 @@ This next example will make the file readable and writable to the user who owns 
   $ ls -l test.txt
   -rw-rw----  1  user  group  1097374 January 26 2:48 test.txt
 ```
-
 Alternatively, we can use `chmod` with hex numbers.
 You can think of each permission setting as a bit where it is a `1` if there is permission for the file and `0` otherwise.
 ```
@@ -377,7 +348,6 @@ For example, the following command will have the same outcome as above.
   -rw-rw---- 1  user  group  1097374 January 26 2:48 test.txt
 ```
 [See permissions tutorial](textbook/using-bash/file-permission)
-
 ##Keyboard Shortcuts
 
 Shortcut | Description
