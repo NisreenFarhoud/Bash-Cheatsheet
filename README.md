@@ -122,7 +122,7 @@ There are four items displayed:
 
 ###awk
 The `awk` command finds and replaces text by searching through files for lines that have a pattern. <br>
-Syntax: `awk 'pattern {action}` test.txt`
+Syntax: `awk 'pattern {action}' test.txt`
 ###wget
 The `wget` command downloads files from the web and stores it in the current working directory. <br>
 `$ wget https://github.com/mikeizbicki/ucr-cs100`
@@ -202,7 +202,7 @@ For example, the following causes `sort` to access its input from the file inste
 ```
 The `sort` command prints the contents of the file and prints to the screen because we haven't redirected its output.
 But we can combine I/O redirection into one command line, such as: <br>
-`$ sort < files.txt > files_sorted.txt`
+`$ sort < files.txt > files_sorted.txt` <br>
 The output is now being sent to the files_sorted.txt file.
 ###Advanced Redirection
 Adding a `&` with the `>` symbol results in redirecting both standard out and standard error.
