@@ -57,12 +57,12 @@ You can change the default 10 lines to any number by manually passing in the des
 For example, the following prints all 50 lines of the file. <br>
 `$ tail -50 test.txt`
 ###true
-The `true` command always returns the exit status zero to indicate sucess.
+The `true` command always returns the exit status zero to indicate success.
 ###false
 The `false` command always returns the exit status non-zero to indicate failure.
 ###grep
 The `grep` command is a search function. <br>
-Passing a string and a file searchs the file for the given string and prints the occurrences to standard output. 
+Passing a string and a file searches the file for the given string and prints the occurrences to standard output. 
 ```
   $ cat users.txt
   user:student password:123
@@ -95,7 +95,7 @@ For example, the following replaces all occurrences of the phrase "Hello" with "
 ###history
 The `history` command prints out your command line history. <br>
 It is command to use the `grep` command with the `history` command in order to search for a particular command.
-For example, the following searchs your history for all occurrences of the string `g++`.
+For example, the following searches your history for all occurrences of the string `g++`.
 ```
   $ history | grep g++
   155  g++ file1.txt
