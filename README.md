@@ -28,7 +28,7 @@ The `cd` command allows you to enter a new directory.
 Syntax | Explanation
 --- | ---
 cd | navigate to home directory
-cd .. | navigate backwords to parent directory
+cd .. | navigate backwards to parent directory
 cd - | navigate to previous working directory
 cd Directory1 | navigate to directory named Directory1
 cd Directory1/Directory2 | navigate to directory, Directory2, through path
@@ -50,7 +50,7 @@ For example, the following file contains the phrase "Hello World!".
   Hello World!
 ```
 Using redirection, you can send the output to a file instead. <br>
-Passing multiply files as parameters will concatenate the files and then print to standard ouput.
+Passing multiply files as parameters will concatenate the files and then print to standard output.
 For example, "file1.txt" contains the phrase "Hello" while file2.txt contains the phrase "World".
 ```
   $ cat file1.txt file2.txt
@@ -91,6 +91,10 @@ For example, the following will print all 50 lines of the file.
 ```
   $ tail -50 test.txt
 ```
+###true
+The `true` command will always return the exit status zero to indicate sucess.
+###false
+The `false` command will always return the exit status non-zero to indicate failure.
 ###history
 The `history` command will print out your command line history. <br>
 It is command to use the `grep` command with the `history` command in order to search for a particular command.
@@ -193,7 +197,7 @@ For example, the command `echo` will execute in the first example but not in the
   Hello
   $ false && echo Hello
 ```
-When using the `||` connetcor, the first command will always execute and the next command will only execute if the one before it fails.
+When using the `||` connector, the first command will always execute and the next command will only execute if the one before it fails.
 For example, the command `echo` will execute in the second example but not in the first.
 ```
   $ true || echo Hello
