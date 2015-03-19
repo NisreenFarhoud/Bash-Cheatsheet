@@ -11,11 +11,6 @@ This means there is a starting directory called the root directory.
 This directory contains files and subdirectories that lead into other subdirectories.
 ###pwd
 The `pwd` command, short for print working directory, displays your current location in the directory structure.
-For example, in the following calling `pwd` shows that our working directory is `/home/user`:
-  ```
-    $ pwd
-    /home/user
-  ```
 ###cd
 The `cd` command allows you to enter a new directory.
 
@@ -254,12 +249,8 @@ You can think of each permission setting as a bit where it is a `1` if there is 
   r-x = 101 = 5
   r-- = 100 = 4
 ```
-Each set of permissions represents a single digit so the following commands have the same outcome as above.
-```
-  $ chmod 660 test.txt
-  $ ls -l test.txt
-  -rw-rw---- 1  user  group  1097374 January 26 2:48 test.txt
-```
+Each set of permissions represents a single digit so the following commands have the same outcome as above. <br>
+`$ chmod 660 test.txt`
 [See permissions tutorial](textbook/using-bash/file-permission)
 ##Keyboard Shortcuts
 Shortcut | Description
