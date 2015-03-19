@@ -250,7 +250,7 @@ You can think of each permission setting as a bit where it is a `1` if there is 
   r-- = 100 = 4
 ```
 Each set of permissions represents a single digit so the following commands have the same outcome as above. <br>
-`$ chmod 660 test.txt`
+`$ chmod 660 test.txt` <br>
 [See permissions tutorial](../../textbook/using-bash/file-permission)
 ##Keyboard Shortcuts
 Shortcut | Description
