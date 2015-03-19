@@ -40,7 +40,7 @@ The `echo` command prints its arguments to standard output. <br>
 If you call `echo` without any parameters, the command prints a new line.
 ###head
 The `head` command reads the first 10 lines of any passed in text and prints its contents to standard output.
-You can change the default 10 lines to any number by manualing passing in the desired size.
+You can change the default 10 lines to any number by manually passing in the desired size.
 For example, the following prints all 50 lines of the file. <br>
 `$ head -50 test.txt`
 ###tail
@@ -210,7 +210,7 @@ For example, if I only wanted to redirect "stderr" to the file `test.txt` from t
   stderr
 ```
 ##Permissions
-The command `ls -l` prints out a lot of informtaion about each file that is informative about the permissions.
+The command `ls -l` prints out a lot of information about each file that is informative about the permissions.
 ```
   $ ls -l test.txt
   -rw-rw-r--  1  user  group  1097374 January 26 2:48 test.txt
@@ -220,7 +220,7 @@ Output from example above | Description/Possible Outputs
 --- | --- 
 - | File type: <br> `-`= regular file <br> `d`= directory 
 rw- | Permissions for owner of file
-rw- | Permissions for memebrs of the gorup owning the file
+rw- | Permissions for members of the group owning the file
 r-- | Permissions for all other users
 user | name of user
 group | name of group
