@@ -168,7 +168,9 @@ Connector | Description
 ##Piping
 Pipes connect multiple commands together by sending the stdout of the first command to the stdin of the next command. 
 For example, the following sends the `ls` output to `head` so that only the top 10 items get printed. <br>
-`$ ls -l | head`
+```
+  $ ls -l | head
+```
 ##Input/Output Redirection
 ###Output Redirection
 Standard output redirection uses the symbols `>` and `>>`. <br>
