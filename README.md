@@ -85,7 +85,7 @@ For example, the following replaces all occurrences of the phrase "Hello" with "
 [See sed tutorial](../../textbook/using-bash/sed)
 ###history
 The `history` command prints out an incremented command line history. <br>
-It is command to use the `grep` command with the `history` command in order to search for a particular command.
+It is common to use the `grep` command with the `history` command in order to search for a particular command.
 For example, the following searches your history for all occurrences of the string `g++`.
 ```
   $ history | grep g++
