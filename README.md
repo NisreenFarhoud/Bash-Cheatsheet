@@ -82,7 +82,7 @@ For example, the following replaces all occurrences of the phrase "Hello" with "
   $ sed 's/Hello/Hi/' test.txt
   Hi World
 ```
-[See sed tutorial](textbook/using-bash/sed)
+[See sed tutorial](../../textbook/using-bash/sed)
 ###history
 The `history` command prints out an incremented command line history. <br>
 It is command to use the `grep` command with the `history` command in order to search for a particular command.
@@ -117,7 +117,7 @@ The `wget` command downloads files from the web and stores it in the current wor
 `$ wget https://github.com/mikeizbicki/ucr-cs100`
 ###nc
 The `nc` command, short for netcat, is a utility used to debug and investigate the network. <br>
-[See nc tutorial](textbook/using-bash/nc-tutorial)
+[See nc tutorial](../../textbook/using-bash/nc-tutorial)
 ###ping
 The `ping` command tests a network connection. <br>
 ```
@@ -251,7 +251,7 @@ You can think of each permission setting as a bit where it is a `1` if there is 
 ```
 Each set of permissions represents a single digit so the following commands have the same outcome as above. <br>
 `$ chmod 660 test.txt`
-[See permissions tutorial](textbook/using-bash/file-permission)
+[See permissions tutorial](../../textbook/using-bash/file-permission)
 ##Keyboard Shortcuts
 Shortcut | Description
 --- | ---
