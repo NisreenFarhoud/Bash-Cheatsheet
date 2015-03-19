@@ -27,7 +27,9 @@ The `mkdir` command makes a new directory in your current directory. <br>
 ###man
 The `man` command directs you to the command manuals. <br>
 For example, the following command gives us all the information we need about the command `cat`. <br>
-`$ man cat`
+```
+  $ man cat`
+```
 ###cat
 The `cat` command reads a file passed as a parameter and by default print its contents to standard output. <br>
 Passing multiply files as parameters concatenates the files and then prints to standard output.
@@ -42,12 +44,16 @@ If you call `echo` without any parameters, the command prints a new line.
 The `head` command reads the first 10 lines of any passed in text and prints its contents to standard output.
 You can change the default 10 lines to any number by manually passing in the desired size.
 For example, the following prints all 50 lines of the file. <br>
-`$ head -50 test.txt`
+```
+$ head -50 test.txt
+```
 ###tail
 The `tail` command reads the last 10 lines of any passed in text and prints its contents to standard output.
 You can change the default 10 lines to any number by manually passing in the desired size.
 For example, the following prints all 50 lines of the file. <br>
-`$ tail -50 test.txt`
+```
+  $ tail -50 test.txt
+```
 ###true
 The `true` command always returns the exit status zero to indicate success.
 ###false
@@ -72,6 +78,7 @@ Common flags | Description
   `-c` | prints number of times found
   `-n` | prints line found on with phrase
   `-v` | prints invert match
+[See regex tutorial](../../textbook/using-bash/regex)
 ###sed
 The `sed` command is a stream editor that performs text transformations on an input. <br>
 Common use of this command is to replace expressions which takes the form `s/regexp/replacement/`
@@ -95,7 +102,9 @@ For example, the following searches your history for all occurrences of the stri
 ###export
 The `export` command sets an environment variable to be passed to child processes in the environment. <br>
 For example, the following exports the variable "name" with the value "student". <br>
-`$ export name=student`
+```
+  $ export name=student
+```
 ###ps
 The `ps` command, short for process status, prints out information about the processes running. <br>
 ```
@@ -114,7 +123,9 @@ The `awk` command finds and replaces text by searching through files for lines t
 Syntax: `awk 'pattern {action}' test.txt`
 ###wget
 The `wget` command downloads files from the web and stores it in the current working directory. <br>
-`$ wget https://github.com/mikeizbicki/ucr-cs100`
+```
+  $ wget https://github.com/mikeizbicki/ucr-cs100
+```
 ###nc
 The `nc` command, short for netcat, is a utility used to debug and investigate the network. <br>
 [See nc tutorial](../../textbook/using-bash/nc-tutorial)
@@ -130,7 +141,8 @@ The `ping` command tests a network connection. <br>
 ```
 The statistics at the end show an overview of how many connections went through before we called `^C` and how long it took.
 ###git
-  [See git tutorial](assignments/lab/lab1-git)
+`Git` is a version control system that is commonly used in the industry and in open source projects. <br>
+[See git tutorial](../../assignments/lab/lab1-git)
 ##Environment Variables
 Environment variables are named variables that contain values used by one or more applications. <br>
 The `PATH` variable contains a list of directories where systems look for executable files. <br>
@@ -181,8 +193,10 @@ For example, the following causes `sort` to access its input from the file inste
   c
 ```
 The `sort` command prints the contents of the file and prints to the screen because we haven't redirected its output.
-But we can combine I/O redirection into one command line, such as: <br>
-`$ sort < files.txt > files_sorted.txt` <br>
+But we can combine I/O redirection into one command line, such as:
+```
+  $ sort < files.txt > files_sorted.txt
+```
 ###Advanced Redirection
 Adding a `&` with the `>` symbol results in redirecting both standard out and standard error.
 For example, the `test.cpp` file prints the string "stdout" with `cout` and the string "stderr" with `cerr`.
@@ -249,8 +263,10 @@ You can think of each permission setting as a bit where it is a `1` if there is 
   r-x = 101 = 5
   r-- = 100 = 4
 ```
-Each set of permissions represents a single digit so the following commands have the same outcome as above. <br>
-`$ chmod 660 test.txt` <br>
+Each set of permissions represents a single digit so the following commands have the same outcome as above.
+```
+  $ chmod 660 test.txt
+```
 [See permissions tutorial](../../textbook/using-bash/file-permission)
 ##Keyboard Shortcuts
 Shortcut | Description
