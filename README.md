@@ -79,7 +79,7 @@ Common flags | Description
   `-c` | prints number of times found
   `-n` | prints line found on with phrase
   `-v` | prints invert match
-[See regex tutorial](../../textbook/using-bash/regex)
+[See regex tutorial](https://github.com/mikeizbicki/ucr-cs100/tree/2015winter/textbook/using-bash/regex)
 ###sed
 The `sed` command is a stream editor that performs text transformations on an input. <br>
 Common use of this command is to replace expressions which takes the form `s/regexp/replacement/`
@@ -90,7 +90,7 @@ For example, the following replaces all occurrences of the phrase "Hello" with "
   $ sed 's/Hello/Hi/' test.txt
   Hi World
 ```
-[See sed tutorial](../../textbook/using-bash/sed)
+[See sed tutorial](https://github.com/mikeizbicki/ucr-cs100/tree/2015winter/textbook/using-bash/sed)
 ###history
 The `history` command prints out an incremented command line history. <br>
 It is common to use the `grep` command with the `history` command in order to search for a particular command.
@@ -129,7 +129,7 @@ The `wget` command downloads files from the web and stores it in the current wor
 ```
 ###nc
 The `nc` command, short for netcat, is a utility used to debug and investigate the network. <br>
-[See nc tutorial](../../textbook/using-bash/nc-tutorial)
+[See nc tutorial](https://github.com/mikeizbicki/ucr-cs100/tree/2015winter/textbook/using-bash/nc-tutorial)
 ###ping
 The `ping` command tests a network connection. <br>
 ```
@@ -143,7 +143,7 @@ The `ping` command tests a network connection. <br>
 The statistics at the end show an overview of how many connections went through before we called `^C` and how long it took.
 ###git
 `Git` is a version control system that is commonly used in the industry and in open source projects. <br>
-[See git tutorial](../../assignments/lab/lab1-git)
+[See git tutorial](https://github.com/mikeizbicki/ucr-cs100/tree/2015winter/assignments/lab/lab1-git)
 ##Environment Variables
 Environment variables are named variables that contain values used by one or more applications. <br>
 The `PATH` variable contains a list of directories where systems look for executable files. <br>
@@ -270,7 +270,7 @@ Each set of permissions represents a single digit so the following commands have
 ```
   $ chmod 660 test.txt
 ```
-[See permissions tutorial](../../textbook/using-bash/file-permission)
+[See permissions tutorial](https://github.com/mikeizbicki/ucr-cs100/tree/2015winter/textbook/using-bash/file-permission)
 ##Keyboard Shortcuts
 Shortcut | Description
 --- | ---
