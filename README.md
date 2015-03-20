@@ -83,6 +83,16 @@ Common less keyboard shortcuts | Description
 The `true` command always returns the exit status zero to indicate success.
 ###false
 The `false` command always returns the exit status non-zero to indicate failure.
+###`$?`
+`$?` is a variable that will return the exit code of the last command you ran.
+```
+$ true
+$ echo $?
+  0
+$ false
+$ echo $?
+  1
+ ```
 ###grep
 The `grep` command is a search function. <br>
 Passing a string and a file searches the file for the given string and prints the occurrences to standard output. 
