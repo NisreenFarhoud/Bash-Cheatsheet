@@ -281,3 +281,4 @@ CTRL-U | Cut everything before the cursor
 CTRL-K | Cut everything after the cursor
 CTRL-Y | Paste the last thing to be cut
 CTRL-_ | Undo
+CTRL-L | Clears terminal scren
