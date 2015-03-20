@@ -83,12 +83,17 @@ Common flags | Description
 ###sed
 The `sed` command is a stream editor that performs text transformations on an input. <br>
 Common use of this command is to replace expressions which takes the form `s/regexp/replacement/`
-For example, the following replaces all occurrences of the phrase "Hello" with "Hi".
+For example, the following replaces the first resp. all occurrences of the phrase "Hello" with "Hi".
 ```
   $ cat test.txt
   Hello World
+  Hello Universe
   $ sed 's/Hello/Hi/' test.txt
   Hi World
+  Hello Universe
+  $ sed 's/Hello/Hi/g' test.txt
+  Hi World
+  Hi Universe
 ```
 [See sed tutorial](../../textbook/using-bash/sed)
 ###history
