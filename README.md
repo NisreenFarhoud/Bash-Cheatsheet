@@ -183,7 +183,7 @@ For example, the following sends the output of `ls` into the file instead of pri
 ```
 If the file isn't already in your working directory, the file gets created.
 If the file already exists, then the contents of the command overwrites what is already in the file. <br>
-To avoid overwriting a file, the `>>>` command appends to the end of the file instead.
+To avoid overwriting a file, the `>>` command appends to the end of the file instead.
 ###Input Redirection
 Standard input redirection uses the symbol `<`. <br>
 For example, the following causes `sort` to access its input from the file instead of the keyboard.
