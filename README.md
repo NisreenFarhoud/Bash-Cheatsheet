@@ -55,10 +55,44 @@ For example, the following prints all 50 lines of the file. <br>
 ```
   $ tail -50 test.txt
 ```
+You can also view in real time any text appended to the file with the `-f` flag.
+```
+$ tail -f test.txt
+```
+###less
+The `less` command gives you a way to navigate through a passed file or block of text. Unlike the `more` command, less allows you to move backward through the file as well.
+```
+$ less test.txt
+$ ps aux | less
+```
+Common less keyboard shortcuts | Description 
+--- | ---
+  `G` | Moves to end of file
+  `g` | Moves to beginning of file
+  `:50` | Moves to the 50th line of the file
+  `q` | Exits less
+  `/searchterm` | Searches for any string matching 'searchterm' below the current line
+  `/` | Moves you to the next match for your previous 'searchterm' below the current line
+   `?searchterm` | Searches for any string matching 'searchterm' above the current line
+  `?` | Moves you to the next match for your previous 'searchterm' above the current line
+  `up` | Moves up a line
+  `down` | Moves down a line
+  `pageup` | Moves up a page
+  `pagedown` | Moves down a page
 ###true
 The `true` command always returns the exit status zero to indicate success.
 ###false
 The `false` command always returns the exit status non-zero to indicate failure.
+###`$?`
+`$?` is a variable that will return the exit code of the last command you ran.
+```
+$ true
+$ echo $?
+  0
+$ false
+$ echo $?
+  1
+ ```
 ###grep
 The `grep` command is a search function. <br>
 Passing a string and a file searches the file for the given string and prints the occurrences to standard output. 
