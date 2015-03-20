@@ -28,7 +28,7 @@ The `mkdir` command makes a new directory in your current directory. <br>
 The `man` command directs you to the command manuals. <br>
 For example, the following command gives us all the information we need about the command `cat`. <br>
 ```
-  $ man cat`
+  $ man cat
 ```
 ###cat
 The `cat` command reads a file passed as a parameter and by default print its contents to standard output. <br>
