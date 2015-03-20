@@ -239,8 +239,8 @@ Output from example above | Description/Possible Outputs
 rw- | Permissions for owner of file
 rw- | Permissions for members of the group owning the file
 r-- | Permissions for all other users
-user | name of user
-group | name of group
+user | name of user owning the file
+group | name of group owning the file
 ###chmod
 The `chmod` command, short for change mode, changes the permissions of a file. <br>
 There is a combination of letters that need to be known in order to change specific users' permission. 
