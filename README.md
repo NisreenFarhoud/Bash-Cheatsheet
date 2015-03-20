@@ -4,7 +4,7 @@ The main topics of this cheatsheet include an intro to the shell, navigating aro
 ##Introduction to the Shell
 The shell is a program, in our case, called "bash" which stands for Bourne Again Shell. 
 How the shell works is it takes your commands and gives them to the operating system to perform.
-In order to interact with the shell, we use "terminal emulators" such as the gnome-terminal, eterm, nxterm, etc. 
+In order to interact with the shell, we use "terminal emulators" such as the [gnome-terminal](https://help.gnome.org/users/gnome-terminal/stable/), [eterm](http://www.eterm.org/), nxterm, etc. 
 ##Navigating Around The Shell
 On a Linux system, files are organized in a hierarchical directory structure. 
 This means there is a starting directory called the root directory.
