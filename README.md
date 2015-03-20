@@ -17,6 +17,7 @@ The `cd` command allows you to enter a new directory.
 Syntax | Explanation
 --- | ---
 cd | navigate to home directory
+cd ~ | navigate to home directory
 cd .. | navigate backwards to parent directory
 cd - | navigate to previous working directory
 cd Directory1 | navigate to directory named Directory1
