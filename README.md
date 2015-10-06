@@ -95,9 +95,8 @@ $ echo $?
  ```
 ###cut
 The `cut` command can be used to display only specific columns from a text file or other command outputs.<br>
-```
 For example, to display the 1st field from a colon delimited file:
-
+```
 $ cut -d ":" -f1 ./names.txt
 
 Emma Thomas
@@ -118,7 +117,6 @@ Common flags | Description
 `--output-delimiter=STRING` | use STRING as the output delimiter the default is to use the input delimiter
 `--help` | display this help and exit
 `--version` | output version information and exit
-``` 
 ###grep
 The `grep` command is a search function. <br>
 Passing a string and a file searches the file for the given string and prints the occurrences to standard output.
