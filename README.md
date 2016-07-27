@@ -93,6 +93,30 @@ $ false
 $ echo $?
   1
  ```
+###cut
+The `cut` command can be used to display only specific columns from a text file or other command outputs.<br>
+For example, to display the 1st field from a colon delimited file:
+```
+$ cut -d ":" -f1 ./names.txt
+
+Emma Thomas
+Alex Jason
+Madison Randy
+Sanjay Gupta
+Nisha Singh
+```
+Common flags | Description
+--- | ---
+`-b` | select only these bytes
+`-c` | select only these characters
+`-d` | use DELIM instead of TAB for field delimiter
+`-f` | --fields=LIST | select only these fields; also print any line that contains no delimiter character, unless the -s option is specified
+`-n` | with `-b`: don't split multibyte characters
+`--complement` | complement the set of selected bytes, characters or fields
+`-s` | do not print lines not containing delimiters
+`--output-delimiter=STRING` | use STRING as the output delimiter the default is to use the input delimiter
+`--help` | display this help and exit
+`--version` | output version information and exit
 ###grep
 The `grep` command is a search function. <br>
 Passing a string and a file searches the file for the given string and prints the occurrences to standard output.
