@@ -163,7 +163,7 @@ The `wget` command downloads files from the web and stores it in the current wor
 ```
 ###nc
 The `nc` command, short for netcat, is a utility used to debug and investigate the network. <br>
-[See nc tutorial](https://github.com/mikeizbicki/ucr-cs100/tree/2015winter/textbook/using-bash/nc-tutorial)
+[See nc tutorial](https://github.com/mikeizbicki/ucr-cs100/tree/2015winter/textbook/using-bash/nctutorial)
 ###ping
 The `ping` command tests a network connection. <br>
 ```
