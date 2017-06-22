@@ -252,6 +252,7 @@ Name | File Descriptor | Description
 stdin | 0 | standard input stream
 stdout | 1 | standard output stream
 stderr | 2 | standard error output stream
+
 For example, if I only wanted to redirect "stderr" to the file `test.txt` from the above example, I would do the following:
 ```
   $ g++ test.cpp
