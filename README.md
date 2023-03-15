@@ -187,9 +187,9 @@ The `PS1` variable is the default prompt to control appearances of the command p
 Connectors allow you to run multiple commands at once.
 
 Connector | Description
---- | --- | ---
+--- | --- 
 `&&` | first command always executes and the next command will only execute if the one before it succeeds
-`||` | first command always executes and the next command will only execute if the one before it fails
+`\|\|` | first command always executes and the next command will only execute if the one before it fails
 `;` | first command and the following commands always execute
 ```
   $ true && echo Hello
